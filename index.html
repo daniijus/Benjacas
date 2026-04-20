@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benja Cas – Arquitectura e Ingeniería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('fondo.jpg') center/cover;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .gallery-item {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-item img, .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img, .gallery-item:hover video {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-bold tracking-tight text-slate-800">
+                BENJA<span class="text-blue-700">CAS</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wider text-slate-600">
+                <a href="#inicio" class="hover:text-blue-700">Inicio</a>
+                <a href="#servicios" class="hover:text-blue-700">Servicios</a>
+                <a href="#proceso" class="hover:text-blue-700">Proceso</a>
+                <a href="#galeria" class="hover:text-blue-700">Galería</a>
+                <a href="https://wa.me/your-number" class="bg-blue-700 text-white px-5 py-2 rounded-sm hover:bg-blue-800 transition-colors">WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1️⃣ HERO -->
+    <section id="inicio" class="hero-gradient min-h-screen flex items-center justify-center text-center px-6 pt-20">
+        <div class="max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+                Convertimos su visión en proyectos ejecutables con rigor técnico y diseño funcional
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 font-light">
+                Desde la conceptualización arquitectónica hasta la entrega de la obra, integramos arquitectura e ingeniería para garantizar resultados precisos y sin contratiempos.
+            </p>
+            <a href="https://wa.me/your-number" class="inline-block bg-blue-700 text-white text-lg font-semibold px-8 py-4 rounded-sm hover:bg-blue-800 transition-all uppercase tracking-widest">
+                Solicitar información
+            </a>
+        </div>
+    </section>
+
+    <!-- 2️⃣ ¿Quiénes somos? -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-8">¿Quiénes somos?</h2>
+            <p class="text-lg md:text-xl text-slate-600 leading-relaxed">
+                Benja Cas es una firma especializada en servicios integrales de arquitectura e ingeniería. Nos distinguimos por asumir la responsabilidad total del ciclo constructivo, desde el primer boceto hasta la supervisión final en sitio. Nuestro enfoque combina la creatividad espacial con la viabilidad técnica, asegurando que cada proyecto sea estéticamente valioso y estructuralmente eficiente.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3️⃣ ¿Por qué elegir Benja Cas? -->
+    <section class="py-20 px-6 bg-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-slate-800 mb-12 text-center">¿Por qué elegir Benja Cas?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="bg-white p-6 border-l-4 border-blue-700 shadow-sm">
+                    <h3 class="font-bold mb-2">Un solo responsable</h3>
+                    <p class="text-sm text-slate-600">Centralizamos la comunicación, eliminando la triangulación de proveedores.</p>
+                </div>
+                <div class="bg-white p-6 border-l-4 border-blue-700 shadow-sm">
+                    <h3 class="font-bold mb-2">Control de costos</h3>
+                    <p class="text-sm text-slate-600">Presupuestos basados en ingenierías reales para evitar incrementos.</p>
+                </div>
+                <div class="bg-white p-6 border-l-4 border-blue-700 shadow-sm">
+                    <h3 class="font-bold mb-2">Cumplimiento de tiempos</h3>
+                    <p class="text-sm text-slate-600">Planificación con cronogramas estrictos para respetar entregas.</p>
+                </div>
+                <div class="bg-white p-6 border-l-4 border-blue-700 shadow-sm">
+                    <h3 class="font-bold mb-2">Diseño funcional</h3>
+                    <p class="text-sm text-slate-600">Espacios que priorizan la habitabilidad y la eficiencia real.</p>
+                </div>
+                <div class="bg-white p-6 border-l-4 border-blue-700 shadow-sm">
+                    <h3 class="font-bold mb-2">Ejecución conforme a proyecto</h3>
+                    <p class="text-sm text-slate-600">Representación fiel de los planos aprobados en la realidad física.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ Nuestros servicios -->
+    <section id="servicios" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-slate-800 mb-16 text-center">Nuestros servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="bg-slate-800 text-white p-4 rounded-sm">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Diseño Arquitectónico</h3>
+                        <p class="text-slate-600">Desarrollamos conceptos que equilibran estética y utilidad, integrando las necesidades del cliente con el análisis de sitio para propuestas únicas.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="bg-slate-800 text-white p-4 rounded-sm">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Ingeniería y Proyecto Ejecutivo</h3>
+                        <p class="text-slate-600">Conjunto técnico de planos estructurales e instalaciones. Es la base técnica para evitar improvisaciones y sobrecostos en obra.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="bg-slate-800 text-white p-4 rounded-sm">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Construcción</h3>
+                        <p class="text-slate-600">Ejecución física con procesos estandarizados y materiales de alta calidad, manteniendo un orden administrativo y técnico constante en sitio.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="bg-slate-800 text-white p-4 rounded-sm">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Supervisión de Obra</h3>
+                        <p class="text-slate-600">Vigilancia técnica continua para garantizar que cada proceso cumpla con las normativas vigentes y los estándares de calidad exigidos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ Nuestro proceso -->
+    <section id="proceso" class="py-24 px-6 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 text-center">Nuestro proceso de trabajo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-bold text-blue-500 mb-4 italic">01.</div>
+                    <h3 class="text-xl font-semibold mb-2">Análisis</h3>
+                    <p class="text-gray-400 text-sm">Definición de alcances, objetivos y necesidades específicas de inversión.</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-bold text-blue-500 mb-4 italic">02.</div>
+                    <h3 class="text-xl font-semibold mb-2">Diseño</h3>
+                    <p class="text-gray-400 text-sm">Elaboración de propuesta arquitectónica e ingenierías de detalle.</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-bold text-blue-500 mb-4 italic">03.</div>
+                    <h3 class="text-xl font-semibold mb-2">Ejecución</h3>
+                    <p class="text-gray-400 text-sm">Gestión de recursos y personal bajo dirección técnica estricta.</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-bold text-blue-500 mb-4 italic">04.</div>
+                    <h3 class="text-xl font-semibold mb-2">Entrega</h3>
+                    <p class="text-gray-400 text-sm">Revisión de detalles y entrega de proyecto listo para habitar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📸 Galería de Proyectos -->
+    <section id="galeria" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Portafolio de Proyectos</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Una muestra de nuestra experiencia en diseño arquitectónico, ingeniería y construcción ejecutada.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Item 1: Imagen -->
+                <div class="gallery-item bg-slate-100 group">
+                    <img src="imagen1.jpg" alt="Cisternas">
+                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold tracking-wider uppercase text-sm">Cisternas</span>
+                    </div>
+                </div>
+                <!-- Item 2: Imagen -->
+                <div class="gallery-item bg-slate-100 group">
+                    <img src="imagen2.jpg" alt="Residencial 1">
+                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold tracking-wider uppercase text-sm">Residencial</span>
+                    </div>
+                </div>
+                <!-- Item 3: Video 1 (Ajustado para mejor compatibilidad) -->
+                <div class="gallery-item bg-slate-100 group">
+                    <video 
+                        poster="imagen3.jpg" 
+                        muted 
+                        loop 
+                        playsinline 
+                        preload="auto"
+                        onmouseover="this.play().catch(e => console.log('Error play:', e))" 
+                        onmouseout="this.pause()"
+                        class="w-full h-full object-cover">
+                        <source src="video1.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white group-hover:opacity-0 transition-opacity">
+                            <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4.5 3.5v13L16 10 4.5 3.5z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                        <span class="text-white font-semibold tracking-wider uppercase text-sm">Video Obra</span>
+                    </div>
+                </div>
+                <!-- Item 4: Imagen -->
+                <div class="gallery-item bg-slate-100 group">
+                    <img src="imagen4.jpg" alt="Ingeniería Civil">
+                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold tracking-wider uppercase text-sm">Ingeniería</span>
+                    </div>
+                </div>
+                <!-- Item 5: Imagen -->
+                <div class="gallery-item bg-slate-100 group">
+                    <img src="imagen5.jpg" alt="Diseño Interiores">
+                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold tracking-wider uppercase text-sm">Interiores</span>
+                    </div>
+                </div>
+                <!-- Item 6: Video 2 (Ajustado para mejor compatibilidad) -->
+                <div class="gallery-item bg-slate-100 group">
+                    <video 
+                        poster="imagen6.jpg" 
+                        muted 
+                        loop 
+                        playsinline 
+                        preload="auto"
+                        onmouseover="this.play().catch(e => console.log('Error play:', e))" 
+                        onmouseout="this.pause()"
+                        class="w-full h-full object-cover">
+                        <source src="video2.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white group-hover:opacity-0 transition-opacity">
+                            <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4.5 3.5v13L16 10 4.5 3.5z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                        <span class="text-white font-semibold tracking-wider uppercase text-sm">Time-lapse</span>
+                    </div>
+                </div>
+                <!-- Item 7: Imagen -->
+                <div class="gallery-item bg-slate-100 group">
+                    <img src="imagen7.jpg" alt="Estructura Metálica">
+                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold tracking-wider uppercase text-sm">Estructuras</span>
+                    </div>
+                </div>
+                <!-- Item 8: Imagen -->
+                <div class="gallery-item bg-slate-100 group">
+                    <img src="imagen8.jpg" alt="Fachada Comercial">
+                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold tracking-wider uppercase text-sm">Comercial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6️⃣ Compromiso -->
+    <section class="py-24 px-6 bg-slate-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6">Compromiso con cada proyecto</h2>
+            <p class="text-lg text-slate-600 italic">
+                "En Benja Cas, entendemos que una obra es una inversión patrimonial significativa. Basamos nuestra práctica en la transparencia financiera y el rigor técnico. No solo construimos estructuras; entregamos certidumbre en cada etapa."
+            </p>
+        </div>
+    </section>
+
+    <!-- 7️⃣ Llamado final a la acción -->
+    <section class="py-24 px-6 bg-blue-700 text-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Comience su proyecto con la seguridad de un equipo profesional</h2>
+            <p class="text-xl mb-10 opacity-90">Garantice la viabilidad y el éxito de su inversión con expertos en arquitectura e ingeniería.</p>
+            <a href="https://wa.me/your-number" class="inline-flex items-center bg-white text-blue-700 text-lg font-bold px-10 py-4 rounded-sm hover:bg-gray-100 transition-all uppercase tracking-wider">
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Agenda una asesoría hoy
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-white text-slate-400 text-sm text-center border-t border-gray-100">
+        <div class="mb-4 text-slate-800 font-bold tracking-tight">
+            BENJA<span class="text-blue-700">CAS</span>
+        </div>
+        <p>&copy; 2024 Benja Cas – Arquitectura e Ingeniería. Todos los derechos reservados.</p>
+        <p class="mt-2">Ciudad de México, México.</p>
+    </footer>
+
+</body>
+</html>
